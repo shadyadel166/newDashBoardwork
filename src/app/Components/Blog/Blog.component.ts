@@ -91,7 +91,7 @@ filterResults() {
     this.get(); 
     return;
   }
-
+console.log(this.query)
   const filteredList = this.listBlog.filter(
     (listBlog) =>
       listBlog.title?.toLowerCase().includes(this.query.toLowerCase()) ||

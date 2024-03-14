@@ -86,16 +86,21 @@ export class UserComponent {
       this.get(); 
       return;
     }
-
+console.log(this.query)
     const filteredList = this.listUser.filter(
-      (user) =>{
-        user.fullName?.toLowerCase().includes(this.query.toLowerCase()) ||
+      (user) =>
+      user.fullName?.toLowerCase().includes(this.query.toLowerCase()) ||
         user.email?.toLowerCase().includes(this.query.toLowerCase())
-      });
+
+
+      );
     this.listUser = filteredList;
   }
   
 }
+
+
+
 
 
 
