@@ -3,8 +3,8 @@
   display: grid;
   grid-area: search;
   grid-template:
-      "search" 60px
-      / 420px;
+    "search" 60px
+    / 420px;
   justify-content: center;
   align-content: center;
   justify-items: stretch;
@@ -44,131 +44,131 @@
 
 .spark:nth-child(1) {
   animation:
-      spark-radius 2.03s 1s both,
-      spark-one-motion 2s 1s both;
+    spark-radius 2.03s 1s both,
+    spark-one-motion 2s 1s both;
 }
 
 @keyframes spark-radius {
   0% {
-      r: 0;
-      animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57)
+    r: 0;
+    animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57)
   }
 
   30% {
-      r: 15;
-      animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04)
+    r: 15;
+    animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04)
   }
 
   95% {
-      r: 8
+    r: 8
   }
 
   99% {
-      r: 10
+    r: 10
   }
 
   99.99% {
-      r: 7
+    r: 7
   }
 
   100% {
-      r: 0
+    r: 0
   }
 }
 
 @keyframes spark-one-motion {
   0% {
-      transform: translate(-20%, 50%);
-      animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25)
+    transform: translate(-20%, 50%);
+    animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25)
   }
 
   20% {
-      transform: rotate(-0deg) translate(0%, -50%);
-      animation-timing-function: ease-in
+    transform: rotate(-0deg) translate(0%, -50%);
+    animation-timing-function: ease-in
   }
 
   80% {
-      transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%);
-      animation-timing-function: linear
+    transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%);
+    animation-timing-function: linear
   }
 
   100% {
-      transform: rotate(-360deg) translate(30px, 100%);
-      animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+    transform: rotate(-360deg) translate(30px, 100%);
+    animation-timing-function: cubic-bezier(.64, .66, 0, .51)
   }
 }
 
 .spark:nth-child(2) {
   animation:
-      spark-radius 2.03s 1s both,
-      spark-two-motion 2.03s 1s both;
+    spark-radius 2.03s 1s both,
+    spark-two-motion 2.03s 1s both;
 }
 
 @keyframes spark-two-motion {
   0% {
-      transform: translate(120%, 50%) rotate(-70deg) translateY(0%);
-      animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55)
+    transform: translate(120%, 50%) rotate(-70deg) translateY(0%);
+    animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55)
   }
 
   20% {
-      transform: translate(90%, -80%) rotate(60deg) translateY(-80%);
-      animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4)
+    transform: translate(90%, -80%) rotate(60deg) translateY(-80%);
+    animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4)
   }
 
   40% {
-      transform: translate(110%, -50%) rotate(-30deg) translateY(-120%);
-      animation-timing-function: linear
+    transform: translate(110%, -50%) rotate(-30deg) translateY(-120%);
+    animation-timing-function: linear
   }
 
   70% {
-      transform: translate(100%, -50%) rotate(120deg) translateY(-100%);
-      animation-timing-function: linear
+    transform: translate(100%, -50%) rotate(120deg) translateY(-100%);
+    animation-timing-function: linear
   }
 
   80% {
-      transform: translate(95%, 50%) rotate(80deg) translateY(-150%);
-      animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+    transform: translate(95%, 50%) rotate(80deg) translateY(-150%);
+    animation-timing-function: cubic-bezier(.64, .66, 0, .51)
   }
 
   100% {
-      transform: translate(100%, 50%) rotate(120deg) translateY(0%)
+    transform: translate(100%, 50%) rotate(120deg) translateY(0%)
   }
 }
 
 .spark:nth-child(3) {
   animation:
-      spark-radius 2.05s 1s both,
-      spark-three-motion 2.03s 1s both;
+    spark-radius 2.05s 1s both,
+    spark-three-motion 2.03s 1s both;
 }
 
 @keyframes spark-three-motion {
   0% {
-      transform: translate(50%, 100%) rotate(-40deg) translateX(0%);
-      animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54)
+    transform: translate(50%, 100%) rotate(-40deg) translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54)
   }
 
   30% {
-      transform: translate(40%, 70%) rotate(20deg) translateX(20%);
-      animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46)
+    transform: translate(40%, 70%) rotate(20deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46)
   }
 
   40% {
-      transform: translate(65%, 20%) rotate(-50deg) translateX(15%);
-      animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+    transform: translate(65%, 20%) rotate(-50deg) translateX(15%);
+    animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
   }
 
   60% {
-      transform: translate(60%, -40%) rotate(-50deg) translateX(20%);
-      animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+    transform: translate(60%, -40%) rotate(-50deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
   }
 
   70% {
-      transform: translate(70%, -0%) rotate(-180deg) translateX(20%);
-      animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26)
+    transform: translate(70%, -0%) rotate(-180deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26)
   }
 
   100% {
-      transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg) translateX(20%);
+    transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg) translateX(20%);
   }
 }
 
@@ -235,12 +235,12 @@
 
   0%,
   100% {
-      opacity: 0
+    opacity: 0
   }
 
   5%,
   80% {
-      opacity: 1
+    opacity: 1
   }
 }
 
@@ -270,61 +270,61 @@
 
 @keyframes particle-one-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(-20deg) translateX(8%) scale(0.5, 0.5)
+    transform: rotate(-20deg) translateX(8%) scale(0.5, 0.5)
   }
 }
 
 @keyframes particle-two-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(0deg) translateX(8%) scale(0.5, 0.5)
+    transform: rotate(0deg) translateX(8%) scale(0.5, 0.5)
   }
 }
 
 @keyframes particle-three-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(20deg) translateX(8%) scale(0.5, 0.5)
+    transform: rotate(20deg) translateX(8%) scale(0.5, 0.5)
   }
 }
 
 @keyframes particle-four-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(-35deg) translateX(12%)
+    transform: rotate(-35deg) translateX(12%)
   }
 }
 
 @keyframes particle-five-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(0deg) translateX(12%)
+    transform: rotate(0deg) translateX(12%)
   }
 }
 
 @keyframes particle-six-move {
   0% {
-      transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+    transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
   }
 
   100% {
-      transform: rotate(35deg) translateX(12%)
+    transform: rotate(35deg) translateX(12%)
   }
 }
 
@@ -340,11 +340,11 @@
 
 @keyframes bar-in {
   0% {
-      stroke-dasharray: 0 180 0 226 0 405 0 0
+    stroke-dasharray: 0 180 0 226 0 405 0 0
   }
 
   100% {
-      stroke-dasharray: 0 0 181 0 227 0 405 0
+    stroke-dasharray: 0 0 181 0 227 0 405 0
   }
 }
 
@@ -355,15 +355,15 @@
 
 @keyframes magnifier-in {
   0% {
-      transform: translate(20px, 8px) rotate(-45deg) scale(0.01, 0.01);
+    transform: translate(20px, 8px) rotate(-45deg) scale(0.01, 0.01);
   }
 
   50% {
-      transform: translate(-4px, 8px) rotate(-45deg);
+    transform: translate(-4px, 8px) rotate(-45deg);
   }
 
   100% {
-      transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
@@ -394,18 +394,83 @@
 
 
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
 
+.card {
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color:#000000;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+ 
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
 
+  h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  
+  p, a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+  }
+  
+  p {
+    inset: auto auto 80px 30px;
+  }
+  
+  a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  &:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
+  }
+  
+  &:hover p, &:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+  }
+  
+  &:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+  }
 
+}
 
-
-
-
-
-
-
-
-
+.material-symbols-outlined {
+  vertical-align: middle;
+}
 
 
 
@@ -472,49 +537,48 @@
 }
 
 /* edit button */
-  .Btn-Edit {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100px;
-    height: 40px;
-    border: none;
-    padding: 0px 20px;
-    background-color: #002c5f;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: #57a1cf;
-    transition-duration: .3s;
-    margin-left: 35px;
-  }
-  
-  .svg {
-    width: 13px;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
-    fill: white;
-    transition-duration: .3s;
-  }
-  
-  .Btn-Edit:hover {
-    color: transparent;
-  }
-  
-  .Btn-Edit:hover svg {
-    right: 43%;
-    margin: 0;
-    padding: 0;
-    border: none;
-    transition-duration: .3s;
-  }
-  
-  .Btn-Edit:active {
-    transform: translate(3px , 3px);
-    transition-duration: .3s;
-    box-shadow: 2px 2px 0px rgb(140, 32, 212);
-  }
-  
+.Btn-Edit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: #002c5f;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: #57a1cf;
+  transition-duration: .3s;
+  margin-left: 35px;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.Btn-Edit:hover {
+  color: transparent;
+}
+
+.Btn-Edit:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.Btn-Edit:active {
+  transform: translate(3px, 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}

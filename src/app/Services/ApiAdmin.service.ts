@@ -11,9 +11,9 @@ export class ApiAdminService {
 
 constructor(private Http:HttpClient) { }
 
+Register(Admin:IAdminLogin){
+  return this.Http.post<IResultApi<any>>(this.dataBaseUrl+"/register", Admin)
 
-filter(name:string,address:string){
-  return this.Http.get<IResultApi<any>>(this.dataBaseUrl+"?name="+ name)
 }
 
 Login(Admin:IAdminLogin){

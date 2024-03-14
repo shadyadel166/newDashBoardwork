@@ -1,5 +1,5 @@
 <!-- <form (ngSubmit)="Send()"> -->
-    <!-- <div class="mb-3">
+<!-- <div class="mb-3">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" [(ngModel)]="user.name">
     </div>
@@ -19,3 +19,165 @@
 
     <button type="button" (click)="Send()" class="btn btn-primary">Submit</button> -->
 <!-- </form> -->
+
+
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+   -->
+<!-- Modal -->
+<div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+                <form role="form text-left" [formGroup]="form" (ngSubmit)="sendReg()">
+                    <label>User Name</label>
+                    <div class="mb-3">
+                        <input type="text" formControlName="fullName" class="form-control" aria-label="Name"
+                            aria-describedby="email-addon" [ngClass]="{
+                            'is-invalid': form.controls['fullName'].invalid && form.controls['fullName'].touched,
+                            'is-valid': form.controls['fullName'].valid && form.controls['fullName'].touched,
+                            }">
+                        <div *ngIf="form.controls['fullName'].invalid && form.controls['fullName'].touched"
+                            class="invalid-feedback">
+                            <span *ngIf="form.controls['fullName'].hasError('required')">
+                                Please Provide a correct User fullName
+                            </span>
+                            <span *ngIf="form.controls['fullName'].hasError('minlength')">
+                                User fullName must contain more than 3 letters.
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['fullName'].valid && form.controls['fullName'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <label>Email Address</label>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" aria-label="Email" aria-describedby="email-addon"
+                            formControlName="email" [ngClass]="{
+                            'is-invalid': form.controls['email'].invalid && form.controls['email'].touched,
+                            'is-valid': form.controls['email'].valid && form.controls['email'].touched,
+                            }">
+                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched"
+                            class="invalid-feedback">
+                            <span
+                                *ngIf="form.controls['email'].hasError('required') || form.controls['email'].hasError('email')">
+                                Please Provide a correct Email Address
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['email'].valid && form.controls['email'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <label>Password</label>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" aria-label="Password"
+                            aria-describedby="password-addon" formControlName="password" [ngClass]="{
+                            'is-invalid': form.controls['password'].invalid && form.controls['password'].touched,
+                            'is-valid': form.controls['password'].valid && form.controls['password'].touched,
+                            }">
+                        <div *ngIf="form.controls['password'].invalid && form.controls['password'].touched"
+                            class="invalid-feedback">
+                            <span *ngIf="form.controls['password'].hasError('required')">
+                                Please Provide a correct password
+                            </span>
+                            <span *ngIf="form.controls['password'].hasError('minlength')">
+                                password must contain more than 8 letters it can be: Numbers or Alphabatic
+                                letters or Special Characters
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['password'].valid && form.controls['password'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <label>Phone Number</label>
+                    <div class="mb-3">
+                        <input type="tel" formControlName="phoneNumber" class="form-control" aria-label="Phone"
+                            aria-describedby="phoneNumber-addon" [ngClass]="{
+                                    'is-invalid': form.controls['phoneNumber'].invalid && form.controls['phoneNumber'].touched,
+                                    'is-valid': form.controls['phoneNumber'].valid && form.controls['phoneNumber'].touched,
+                                    }">
+                        <div *ngIf="form.controls['phoneNumber'].invalid && form.controls['phoneNumber'].touched"
+                            class="invalid-feedback">
+                            <span *ngIf="form.controls['phoneNumber'].hasError('required')">
+                                Please Provide a correct Phone Number
+                            </span>
+                            <span *ngIf="form.controls['phoneNumber'].hasError('minlength')">
+                                Phone Number must contain more than 11 letters it can be like 012345678910
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['phoneNumber'].valid && form.controls['phoneNumber'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <label>National Id</label>
+                    <div class="mb-3">
+                        <input type="tel" formControlName="nationalId" class="form-control" aria-label="Phone"
+                            aria-describedby="nationalId-addon" [ngClass]="{
+                                    'is-invalid': form.controls['nationalId'].invalid && form.controls['nationalId'].touched,
+                                    'is-valid': form.controls['nationalId'].valid && form.controls['nationalId'].touched,
+                                    }">
+                        <div *ngIf="form.controls['nationalId'].invalid && form.controls['nationalId'].touched"
+                            class="invalid-feedback">
+                            <span *ngIf="form.controls['nationalId'].hasError('required')">
+                                Please Provide a correct Phone Number
+                            </span>
+                            <span *ngIf="form.controls['nationalId'].hasError('minlength')">
+                                Phone Number must contain more than 11 letters it can be like 012345678910
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['nationalId'].valid && form.controls['nationalId'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <label>address</label>
+                    <div class="mb-3">
+                        <input type="tel" formControlName="address" class="form-control" aria-label="Phone"
+                            aria-describedby="address-addon" [ngClass]="{
+                                    'is-invalid': form.controls['address'].invalid && form.controls['address'].touched,
+                                    'is-valid': form.controls['address'].valid && form.controls['address'].touched,
+                                    }">
+                        <div *ngIf="form.controls['address'].invalid && form.controls['address'].touched"
+                            class="invalid-feedback">
+                            <span *ngIf="form.controls['address'].hasError('required')">
+                                Please Provide a correct Phone Number
+                            </span>
+                            <span *ngIf="form.controls['address'].hasError('minlength')">
+                                Phone Number must contain more than 11 letters it can be like 012345678910
+                            </span>
+                        </div>
+                        <div *ngIf="form.controls['address'].valid && form.controls['address'].touched"
+                            class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" data-bs-dismiss="modal" [disabled]="form.invalid" class="btn bg-gradient-dark w-100 my-4 mb-2 btn-primary">Add
+                            User</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

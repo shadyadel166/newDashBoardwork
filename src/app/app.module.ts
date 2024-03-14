@@ -18,6 +18,7 @@ import { AddBlogComponent } from "./Components/AddBlog/AddBlog.component";
 import { LoaderComponent } from "./Components/Loader/Loader.component";
 import { LoaderInterceptor } from "./Services/Interceptors/loader.interceptor";
 import { Page404Component } from "./Components/Page404/Page404.component";
+import { RegisterComponent } from "./Components/Register/Register.component";
 // import { NgxChartComponent } from "./Components/ngx-chart/ngx-chart.component";
 // import { NgxChartsModule } from '@swimlane/ngx-charts';
 
@@ -37,6 +38,7 @@ import { Page404Component } from "./Components/Page404/Page404.component";
        AddBlogComponent,
     LoaderComponent,
     Page404Component,
+    RegisterComponent,
 
     
     ],

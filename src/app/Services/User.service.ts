@@ -29,6 +29,8 @@ deleteUser(id:string){
 searchUser(query:string){
   return this.Http.get<IResultApi<IUser[]>>(`${this.dataUser}/search/${query}`)
 }
+
+
 }
 
 

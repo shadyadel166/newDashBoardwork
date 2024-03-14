@@ -2,6 +2,5 @@
 
 <div [ngClass]="{'d-none': toLoad|async}">
     <router-outlet></router-outlet>
-
 </div>
-<app-Loader></app-Loader>
+<app-Loader *ngIf="toLoad|async"></app-Loader>

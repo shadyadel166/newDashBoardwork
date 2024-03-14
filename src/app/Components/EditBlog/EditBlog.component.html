@@ -1,37 +1,3 @@
-<div class="container me-5 d-flex  flex-wrap ">
-
-  <div class="card me-5 mt-5" style="width: 18rem;">
-    <img class="card-img-top" alt="...">
-    <div class="card-body">
-      <h6>Id :</h6>
-      <h5 class="card-title">Title: </h5>
-      <p class="card-text">description: </p>
-      <h6>Count Like: </h6>
-      <h6>Comment: </h6>
-
-      <button class="continue-application" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <div>
-          <div class="pencil"></div>
-          <div class="folder">
-            <div class="top">
-              <svg viewBox="0 0 24 27">
-                <path
-                  d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
-                </path>
-              </svg>
-            </div>
-            <div class="paper"></div>
-          </div>
-        </div>
-        Edit
-      </button>
-    </div>
-
-  </div>
-</div>
-
-
-
 
 <!-- model edit -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -50,29 +16,29 @@
 
             <div class="mb-3">
               <label class="form-label">Title Blog</label>
-              <input type="text" formControlName="name" class="form-control">
-              <div *ngIf="editBlogForm.controls['name'].invalid && editBlogForm.controls['name'].touched" class="invalid-feedback">
-                <span *ngIf="editBlogForm.controls['name'].hasError('required')">
-                  Please Provide a correct Title Blog name
+              <input type="text" formControlName="title" class="form-control">
+              <div *ngIf="editBlogForm.controls['title'].invalid && editBlogForm.controls['title'].touched" class="invalid-feedback">
+                <span *ngIf="editBlogForm.controls['title'].hasError('required')">
+                  Please Provide a correct Title Blog title
                 </span>
               </div>
-              <div *ngIf="editBlogForm.controls['name'].valid && editBlogForm.controls['name'].touched" class="valid-feedback">
+              <div *ngIf="editBlogForm.controls['title'].valid && editBlogForm.controls['title'].touched" class="valid-feedback">
                 Looks good!
               </div>
             </div>
             <div class="mb-3">
-              <label class="form-label">Blog Description</label>
-              <textarea class="form-control" formControlName="description"></textarea>
-              <div *ngIf="editBlogForm.controls['description'].invalid && editBlogForm.controls['description'].touched"
+              <label class="form-label">Blog Body</label>
+              <textarea class="form-control" formControlName="body"></textarea>
+              <div *ngIf="editBlogForm.controls['body'].invalid && editBlogForm.controls['body'].touched"
                 class="invalid-feedback">
-                <span *ngIf="editBlogForm.controls['description'].hasError('required')">
-                  Please Provide a correct Blog description
+                <span *ngIf="editBlogForm.controls['body'].hasError('required')">
+                  Please Provide a correct Blog body
                 </span>
-                <span *ngIf="editBlogForm.controls['description'].hasError('minlength')">
-                  Product description must contain more than 30 letters.
+                <span *ngIf="editBlogForm.controls['body'].hasError('minlength')">
+                  Product body must contain more than 30 letters.
                 </span>
               </div>
-              <div *ngIf="editBlogForm.controls['description'].valid && editBlogForm.controls['description'].touched"
+              <div *ngIf="editBlogForm.controls['body'].valid && editBlogForm.controls['body'].touched"
                 class="valid-feedback">
                 Looks good!
               </div>
