@@ -1,0 +1,7 @@
+<!-- <app-SideNav></app-SideNav> -->
+
+<div [ngClass]="{'d-none': toLoad|async}">
+    <router-outlet></router-outlet>
+
+</div>
+<app-Loader></app-Loader>
