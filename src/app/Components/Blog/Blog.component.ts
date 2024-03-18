@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class BlogComponent {
   listBlog: IBlog[] = [];
-  selectedBlog: IBlog  = {image:"",title:"",body:"",_id:"",countLike:0,date:"",comment:"",}
+  selectedBlog: IBlog  = {image:"",title:"",body:"",_id:"",likes:0,date:"",comments:[],}
   form: FormGroup;
 data:FormData=new FormData();
 query: string = '';
@@ -30,6 +30,7 @@ query: string = '';
     this.apiServ.getAllBlog().subscribe({
       next: (res) => {
         this.listBlog = res.data;
+        console.log(this.listBlog)
       },
       error: (err) => {
         console.log(err);

@@ -9,24 +9,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './User.component.html',
   styleUrls: ['./User.component.css'],
 })
-export class UserComponent {
+export class UserComponent   {
   listUser: IUser[] = [];
   User!: IUser;
   form: FormGroup;
   query: string = '';
+ 
 
   constructor(
     private userService: UserService,
     private router: Router,
     private builder: FormBuilder
   ) {
+    // read users
     this.get();
+
+// edit Users
+
     this.form = this.builder.group({
       fullName: [''],
       nationalId: [''],
       email: [''],
       phoneNumber: [''],
       address: [''],
+      role: 'user',
     });
   }
 
@@ -65,6 +71,8 @@ export class UserComponent {
       email: [this.User.email, [Validators.required]],
       phoneNumber: [this.User.phoneNumber, [Validators.required]],
       address: [this.User.address, [Validators.required]],
+      role: [this.User.role, [Validators.required]],
+
     });
   }
   EditApi() {
@@ -97,6 +105,8 @@ console.log(this.query)
     this.listUser = filteredList;
   }
   
+
+
 }
 
 

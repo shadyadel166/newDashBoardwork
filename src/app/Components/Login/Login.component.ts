@@ -42,7 +42,7 @@ export class LoginComponent {
             Name: res.data.name,
           };
           this.Auth.newAdmin(data);
-          this.router.navigate(['/']);
+          this.router.navigate(['/home']);
         } else {
           alert(res.message);
         }

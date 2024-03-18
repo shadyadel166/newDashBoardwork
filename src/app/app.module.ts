@@ -14,15 +14,14 @@ import { EditUserComponent } from "./Components/EditUser/EditUser.component";
 import { AuthInterceptor } from "./Services/Interceptors/auth.interceptor";
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { EditBlogComponent } from "./Components/EditBlog/EditBlog.component";
-import { AddBlogComponent } from "./Components/AddBlog/AddBlog.component";
 import { LoaderComponent } from "./Components/Loader/Loader.component";
 import { LoaderInterceptor } from "./Services/Interceptors/loader.interceptor";
 import { Page404Component } from "./Components/Page404/Page404.component";
 import { RegisterComponent } from "./Components/Register/Register.component";
-// import { NgxChartComponent } from "./Components/ngx-chart/ngx-chart.component";
-// import { NgxChartsModule } from '@swimlane/ngx-charts';
-
-
+import { HomeComponent } from "./Components/Home/Home.component";
+import { NgxChartComponent } from "./Components/ngx-chart/ngx-chart.component";
+import { UserChartComponent } from "./Components/UserChart/UserChart.component";
+import { TestChartComponent } from "./Components/TestChart/TestChart.component";
 
 
 
@@ -35,11 +34,13 @@ import { RegisterComponent } from "./Components/Register/Register.component";
         LoginComponent,
        SideNavComponent,
        EditBlogComponent,
-       AddBlogComponent,
     LoaderComponent,
     Page404Component,
     RegisterComponent,
-
+    HomeComponent,
+NgxChartComponent,
+UserChartComponent,
+TestChartComponent
     
     ],
     imports:[
@@ -47,10 +48,8 @@ import { RegisterComponent } from "./Components/Register/Register.component";
         RouterModule.forRoot(routes),
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule, 
-        // NgxChartsModule,
-      
-
+        ReactiveFormsModule,
+  
     ],
     bootstrap:[AppComponent],
     providers:[

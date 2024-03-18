@@ -6,7 +6,7 @@
         loading="lazy" />
     </a>
     <div class="list-group list-group-flush mt-5">
-      <a class="list-group-item list-group-item-action mb-3 fs-4">
+      <a [routerLink]="['/home']" class="list-group-item list-group-item-action mb-3 fs-4">
         <i class=" fa fa-dashboard me-3 "></i>Dashboard</a>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -21,16 +21,17 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show " data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <a [routerLink]="['/blog']" class="text-decoration-none text-light fs-4"> <i class="fa fa-blog me-3"></i> Blog</a>
-            </div>
-            <div class="accordion-body">
-              <a routerLink="/addBlog" class="text-decoration-none text-light fs-4" data-bs-toggle="modal" data-bs-target="#addBlog"><i
-                  class="fa fa-add me-3"></i> Add Blog</a>
-            </div>
-            <div class="accordion-body">
-              <a href="" [routerLink]="['/editblog']" class="text-decoration-none text-light fs-4"> <i class="fa fa-edit me-3"></i> Edit
+              <a [routerLink]="['/blog']" class="text-decoration-none text-light fs-4"> <i class="fa fa-blog me-3"></i>
                 Blog</a>
             </div>
+            <div class="accordion-body">
+              <a href=""  class="text-decoration-none text-light fs-4" data-bs-toggle="modal" data-bs-target="#addBlog"><i class="fa fa-add me-3"></i> Add Blog</a>
+            </div>
+            <!-- <div class="accordion-body">
+              <a href="" [routerLink]="['/editblog']" class="text-decoration-none text-light fs-4"> <i
+                  class="fa fa-edit me-3"></i> Edit
+                Blog</a>
+            </div> -->
           </div>
         </div>
 
@@ -46,16 +47,18 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <a [routerLink]="['/AllUser']" routerLinkActive="router-link-active" class="text-decoration-none text-light fs-4"> <i
-                  class="fa fa-user me-3"></i> User</a>
+              <a [routerLink]="['/AllUser']" routerLinkActive="router-link-active"
+                class="text-decoration-none text-light fs-4"> <i class="fa fa-user me-3"></i> User</a>
             </div>
             <div class="accordion-body">
-              <a [routerLink]="['/addUser']" class="text-decoration-none text-light fs-4" data-bs-toggle="modal" data-bs-target="#addUser">
+              <a [routerLink]="['/addUser']" class="text-decoration-none text-light fs-4" data-bs-toggle="modal"
+                data-bs-target="#addUser">
                 <i class="fa fa-add me-3"></i> Add User</a>
             </div>
-            <div class="accordion-body">
-              <a [routerLink]="['/editUser']" class="text-decoration-none text-light fs-4"><i class="fa fa-edit me-3"></i>Edit User</a>
-            </div>
+            <!-- <div class="accordion-body">
+              <a [routerLink]="['/editUser']" class="text-decoration-none text-light fs-4"><i
+                  class="fa fa-edit me-3"></i>Edit User</a>
+            </div> -->
           </div>
         </div>
 
@@ -63,7 +66,7 @@
 
     </div>
   </div>
-  
+
 
   <div id="page-content-wrapper">
 
@@ -71,7 +74,7 @@
 
       <div class="container-fluid">
         <button class="btn btn-primary" (click)="clickEvent()"><i class="fa fa-bars"></i></button>
-     
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav ms-auto d-flex flex-row">
@@ -92,11 +95,73 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid ">
+    <div class="container-fluid  ">
+      <!-- <app-Home></app-Home> -->
       <router-outlet></router-outlet>
     </div>
   </div>
- 
+
 
 </div>
 <!-- /#wrapper -->
+
+
+<!-- add blog model -->
+<div class="modal fade" id="addBlog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-info" id="exampleModalLabel">Add Blog</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="send()">
+          <div class="mb-3">
+            <label class="form-label">Title Blog</label>
+            <input type="text" formControlName="title" class="form-control">
+            <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="invalid-feedback">
+              <span *ngIf="form.controls['title'].hasError('required')">
+                Please Provide a correct Title Blog name
+              </span>
+            </div>
+            <div *ngIf="form.controls['title'].valid && form.controls['title'].touched" class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Blog Body</label>
+            <textarea class="form-control" formControlName="body"></textarea>
+            <div *ngIf="form.controls['body'].invalid && form.controls['body'].touched" class="invalid-feedback">
+              <span *ngIf="form.controls['body'].hasError('required')">
+                Please Provide a correct Blog body
+              </span>
+              <span *ngIf="form.controls['body'].hasError('minlength')">
+                blog body must contain more than 30 letters.
+              </span>
+            </div>
+            <div *ngIf="form.controls['body'].valid && form.controls['body'].touched" class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="">Blog Image</label>
+            <input type="file" class="form-control" #imgInput (change)="chooseImage(imgInput)">
+            <span *ngIf="!imageLoad">Photo is required</span>
+          </div>
+          <div class="modal-footer">
+
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" [disabled]="form.invalid && !imageLoad">Add Blog</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- add users  -->
+
+
+
