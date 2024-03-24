@@ -73,7 +73,7 @@ export class SideNavComponent {
         alert('Blog Added');
         this.form.reset();
         this.data = new FormData();
-      //   this.router.navigate(['/blog']);
+        // this.router.navigate(['/blog']);
       this.router.navigateByUrl("/blog")    
   } else {
         alert('something wrong');

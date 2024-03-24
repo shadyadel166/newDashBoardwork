@@ -22,6 +22,7 @@ import { HomeComponent } from "./Components/Home/Home.component";
 import { NgxChartComponent } from "./Components/ngx-chart/ngx-chart.component";
 import { UserChartComponent } from "./Components/UserChart/UserChart.component";
 import { TestChartComponent } from "./Components/TestChart/TestChart.component";
+import { BlogDetailsComponent } from "./Components/BlogDetails/BlogDetails.component";
 
 
 
@@ -40,7 +41,8 @@ import { TestChartComponent } from "./Components/TestChart/TestChart.component";
     HomeComponent,
 NgxChartComponent,
 UserChartComponent,
-TestChartComponent
+TestChartComponent,
+BlogDetailsComponent,
     
     ],
     imports:[

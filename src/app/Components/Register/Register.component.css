@@ -1,0 +1,12 @@
+.div{
+    background-image: url('../../../assets/14542.jpg');
+}
+.contant{
+    background-image: url('../../../assets/bacaddUser.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+height: 100vh;
+color: #ffffff;
+}
+

@@ -33,6 +33,7 @@ export class UserComponent   {
       phoneNumber: [''],
       address: [''],
       role: 'user',
+      
     });
   }
 

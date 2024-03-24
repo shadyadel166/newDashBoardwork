@@ -33,7 +33,13 @@ deleteBlog(id:string){
 }
 
 getBlogBytitle(title:string){
-  return this.Http.get<IResultApi<any>>(this.dataBaseUrl+"//getBlogByTitle/"+title)
+  return this.Http.get<IResultApi<any>>(this.dataBaseUrl+"/getBlogByTitle/"+title)
+}
+
+
+getCommentsByBlogId(id:string)
+{
+  return this.Http.get<IResultApi<any>>("http://localhost:5000/comment/comments/"+id)
 }
 
 }

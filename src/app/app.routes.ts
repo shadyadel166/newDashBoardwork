@@ -12,19 +12,21 @@ import { RegisterComponent } from './Components/Register/Register.component';
 import { HomeComponent } from './Components/Home/Home.component';
 import { NavSideComponent } from './Components/NavSide/NavSide.component';
 import { Component } from '@angular/core';
+import { BlogDetailsComponent } from './Components/BlogDetails/BlogDetails.component';
 export const routes: Routes = [
   {
     // path:'/',component:HomeComponent,
     path:'',component:SideNavComponent,
     children: [
-      
+      {path:"",redirectTo:"/home",pathMatch:"full"},
       {path:"home",component:HomeComponent},
       {path:'blog',component:BlogComponent},
       { path: 'AllUser', component: UserComponent },
       { path: 'editUser', component: EditUserComponent },
       { path: 'editblog', component: EditBlogComponent },
       // {path:'addBlog', component: AddBlogComponent},
-      {path:'addUser',component:RegisterComponent}
+      {path:'addUser',component:RegisterComponent},
+      {path:'details/:id',component:BlogDetailsComponent}
     ],
     
     canActivate: [AuthGuard]
@@ -33,9 +35,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
 
-  { path: '404', component: Page404Component },
-
-  { path: '*', redirectTo: '404', pathMatch:'full'},
+  {path:'404',component:Page404Component},
+{path:'**',redirectTo:'404',pathMatch:'full'}
  
 
 ];

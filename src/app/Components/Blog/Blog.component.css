@@ -483,8 +483,35 @@
 
 
 
+/* button read more */
 
+.readMore {
+  color: #052c65;
+  text-decoration: none;
+  font-size: 18px;
+  border: none;
+  background: none;
+  font-weight: 300;
+  font-family: 'Poppins';
+  margin-left: 25px;
+}
 
+.readMore::before {
+  margin-left: auto;
+}
+
+.readMore::after, .readMore::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  display: block;
+  transition: 0.5s;
+}
+
+.readMore:hover::after, .readMore:hover::before {
+  width: 100%;
+}
 
 
 

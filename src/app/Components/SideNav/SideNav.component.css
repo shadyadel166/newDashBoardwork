@@ -1,7 +1,7 @@
 #sidebar-wrapper {
   min-height: 100vh;
 
-  background: rgba(99, 170, 201, 0.48);
+  background: #8ac0e4;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.3px);
@@ -31,6 +31,9 @@
 }
 
 
+#togel{
+  color: #509acb;
+}
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
