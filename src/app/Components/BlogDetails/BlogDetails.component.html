@@ -11,7 +11,7 @@
         <div *ngFor="let item of comments" class="contant-comment">
           <div class="info-comment">
             <p class="userName">{{item.userId.fullName}}</p>
-            <span>{{item.createdAt|date:'shortTime'}}</span>
+            <span>{{item.createdAt|date:'short'}}</span>
           </div>
           <p> {{item.comment}}</p>
 

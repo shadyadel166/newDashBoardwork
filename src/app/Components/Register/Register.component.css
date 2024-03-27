@@ -6,7 +6,20 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-height: 100vh;
+height: fit-content;
 color: #ffffff;
 }
 
+.userName{
+    height: 90px;
+    overflow: hidden;
+}
+.sub{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px!important;
+}
+.sub>button{
+    
+    margin-top: -50px!important;
+}

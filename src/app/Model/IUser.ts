@@ -28,4 +28,5 @@ export interface IUser {
   phoneNumber: number;
   address: string;
   role: string;
+  token: string;
 }

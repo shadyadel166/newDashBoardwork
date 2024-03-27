@@ -33,7 +33,7 @@ export class UserComponent   {
       phoneNumber: [''],
       address: [''],
       role: 'user',
-      
+      token:['']
     });
   }
 
@@ -73,6 +73,7 @@ export class UserComponent   {
       phoneNumber: [this.User.phoneNumber, [Validators.required]],
       address: [this.User.address, [Validators.required]],
       role: [this.User.role, [Validators.required]],
+      token:[this.User.token,[Validators.required]]
 
     });
   }
