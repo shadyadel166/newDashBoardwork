@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class BlogComponent {
   listBlog: IBlog[] = [];
-  selectedBlog: IBlog  = {image:"",title:"",body:"",_id:"",likes:0,date:"",comments:[],}
+  selectedBlog: IBlog  = {image:"",title:"",body:"",_id:"",likes:0,date:"",comments:[],likedBy:[],}
   form: FormGroup;
 data:FormData=new FormData();
 query: string = '';

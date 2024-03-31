@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-   
+   ;
     /* height: 50vh; */
+}
+.CHARO{
+    width: 150PX;
+    height: 200px;
 }

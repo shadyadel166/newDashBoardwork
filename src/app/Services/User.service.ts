@@ -7,7 +7,7 @@ import { IUser } from '../Model/IUser';
   providedIn: 'root'
 })
 export class UserService {
- dataUser="http://localhost:5000/users"
+ dataUser="http://localhost:8000/users"
 constructor(private Http:HttpClient) { }
 
 getAllUser(){

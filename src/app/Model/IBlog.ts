@@ -4,8 +4,9 @@ export interface IBlog {
     body:string,
     image:string,
     date:string,
-    comments:[],
+    comments: any[],
     likes:number,
+    likedBy:[],
 }
 
 // export class Blog{

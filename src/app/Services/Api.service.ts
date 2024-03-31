@@ -7,7 +7,7 @@ import { IBlog } from '../Model/IBlog';
   providedIn: 'root'
 })
 export class ApiServiceService {
-dataBaseUrl="http://localhost:5000/blog"
+dataBaseUrl="http://localhost:8000/blog"
 constructor(private Http:HttpClient) { }
 
 
@@ -39,7 +39,7 @@ getBlogBytitle(title:string){
 
 getCommentsByBlogId(id:string)
 {
-  return this.Http.get<IResultApi<any>>("http://localhost:5000/comment/comments/"+id)
+  return this.Http.get<IResultApi<any>>("http://localhost:8000/comment/comments/"+id)
 }
 
 }

@@ -57,7 +57,7 @@
     <div class="card__content">
       <h1 class="card__title">Title: {{item.title}}</h1>
       <p class="card__description"><span class="fs-5"> description: </span>{{item.body}}</p>
-      <h6>count Like: {{item.likes}}</h6>
+      <h6>count Like: {{item.likedBy.length}}</h6>
       <div class="postedBy">
         <button class="delete-button" (click)="deleteBlog(item._id)">
           <svg class="delete-svgIcon" viewBox="0 0 448 512">
@@ -225,7 +225,7 @@
               </div>
               <div class="mb-3">
                 <label for="body" class="form-label">Body</label>
-                <textarea class="form-control" id="body" formControlName="body" required></textarea>
+                <textarea class="form-control h-100"  id="body" formControlName="body" required ></textarea>
               </div>
               <button data-bs-dismiss="modal" type="submit" class="btn btn-primary">Update</button>
             </form>
